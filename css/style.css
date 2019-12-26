@@ -25,7 +25,10 @@ section{
 header{
     border-bottom: 1px solid#ccc;
     border-top: 1px solid#ccc;
-    padding: 9px;
+    padding: 9px 9px 0;
+}
+header #wrapper{
+    align-items: center;
 }
 header nav ul{
     list-style: none;   
@@ -172,4 +175,66 @@ hr{
 .copyRights>:first-child:after{
     content: '\25bc';
     padding-left: 55px;
+}
+.menu-content {
+    font-family: 'Oswald', sans-serif; 
+    padding: 0 0 0 50px;
+}
+.collapsible-menu {
+    background-color: rgb(255, 255, 255);
+    width: 80px;
+    /*padding: 0px 30px;
+    border-bottom: 3px solid #CDE700;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.2);*/
+}
+.collapsible-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+.collapsible-menu a {
+    display:block;
+    padding: 10px;
+    text-decoration: none;
+}
+.collapsible-menu label {
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 20px;
+    display: block;
+    cursor: pointer;
+    background: url(menu.png) no-repeat left center;
+    padding: 10px 0 10px 50px;
+}
+input#menu {
+    display: none;
+}
+.menu-content {
+    max-height: 0;
+    overflow: hidden;
+    font-family: 'Oswald', sans-serif; 
+    padding: 0 0 0 50px;
+}
+/* Toggle Effect */
+input:checked ~ label {
+    background-image: url(close.png);
+}
+input:checked ~ .menu-content {
+    max-height: 100%;
+}
+nav,.leftNav {
+    display: inline-block;
+}
+.watch h2{
+    background: red;
+    padding: 10px;
+}
+.watch a{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+}
+.watch a:before{
+    content: '\25ba';
+    margin-right :4px;
+    font-weight: 700;
 }
