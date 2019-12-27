@@ -129,6 +129,7 @@ hr{
 }
 #lists img{
   width: 159px;
+  filter:invert(1);
 }
 #lists ul{
     list-style: none;   
@@ -182,46 +183,59 @@ hr{
 }
 .collapsible-menu {
     background-color: rgb(255, 255, 255);
-    width: 80px;
-    /*padding: 0px 30px;
+    width: 80%;    
+    /*padding: 0px 30px;    
     border-bottom: 3px solid #CDE700;
     box-shadow: 1px 2px 3px rgba(0,0,0,0.2);*/
 }
 .collapsible-menu ul {
     list-style-type: none;
     padding: 0;
+    
 }
 .collapsible-menu a {
     display:block;
-    padding: 10px;
+    padding: 10px 40px;
     text-decoration: none;
 }
 .collapsible-menu label {
     font-family: 'Sedgwick Ave Display', cursive;
-    font-size: 20px;
+    font-size: 30px; 
     display: block;
     cursor: pointer;
-    background: url(menu.png) no-repeat left center;
+    background: url(../image/menu.png) no-repeat left center;
     padding: 10px 0 10px 50px;
 }
 input#menu {
     display: none;
+}
+input:checked +label {
+    background-image: url(image/close.png);
 }
 .menu-content {
     max-height: 0;
     overflow: hidden;
     font-family: 'Oswald', sans-serif; 
     padding: 0 0 0 50px;
+    position: relative;
+    width: 160px;
+    
+
 }
 /* Toggle Effect */
 input:checked ~ label {
-    background-image: url(close.png);
+    background-image: url(image/close.png);
+    background-size: contain;
 }
 input:checked ~ .menu-content {
     max-height: 100%;
 }
 nav,.leftNav {
     display: inline-block;
+}
+.leftNav{
+    margin-left: -80px;
+    margin-top: -5px;
 }
 .watch h2{
     background: red;
@@ -237,4 +251,53 @@ nav,.leftNav {
     content: '\25ba';
     margin-right :4px;
     font-weight: 700;
+    font-size: large;
+}
+@media only screen and (max-width:974px){
+   .download{
+       flex-direction: column;
+   } 
+   .downLink{
+       display:none;
+   }
+   .stores div {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+   }
+   .stores a {
+		padding: 8px;
+}
+#lists {	
+	justify-content: center;
+	flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+}
+@media only screen and (max-width:600px){
+    .slogan h2 {
+        font-size: 44px;
+    }
+}
+@media only screen and (max-width:370px){
+    .slogan h2 {
+        font-size: 24px;
+    }
+    .slogan p{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 12px;
+    }
+    @media only screen and (max-width:304px){
+        .leftNav {
+            margin-left: 0; 
+           
+        }
+        .slogan p{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 10px;
+        }
+    }
 }
